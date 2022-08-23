@@ -1,3 +1,5 @@
+/**
+ */
 import { waitForDOMContentLoaded } from "../utils/async-utils";
 import { childMatch, setMatrixWorld, calculateViewingDistance } from "../utils/three-utils";
 import { paths } from "./userinput/paths";
@@ -5,7 +7,8 @@ import { getBox } from "../utils/auto-box-collider";
 import qsTruthy from "../utils/qs_truthy";
 import { isTagged } from "../components/tags";
 import { qsGet } from "../utils/qs_truthy";
-const customFOV = qsGet("fov");
+//// Custom FOV hard coded to 55°
+const customFOV = qsGet("fov") || 55;
 const enableThirdPersonMode = qsTruthy("thirdPerson");
 import { Layers } from "../components/layers";
 

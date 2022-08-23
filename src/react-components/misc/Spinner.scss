@@ -1,9 +1,13 @@
-@use "../styles/theme.scss";
+////DISABLED @use "../styles/theme.scss";
 
 :local(.spinner) {
+  width: 100px;
+  height: 100px;
+
+  /****DISABLED
   animation: rotate 3s infinite linear;
 
-  *[stroke=\#000] {
+  [stroke=\#000] {
     stroke: theme.$primary-color;
   }
 
@@ -13,10 +17,12 @@
 
   @keyframes rotate {
     0% {
-        transform: rotate(0deg);
+      transform: rotate(0deg);
     }
+
     100% {
-        transform: rotate(360deg);
+      transform: rotate(360deg);
     }
   }
+  ****/
 }

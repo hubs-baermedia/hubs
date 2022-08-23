@@ -9,7 +9,14 @@ import { Column } from "../layout/Column";
 import { InviteLinkInputField } from "./InviteLinkInputField";
 import { FormattedMessage, defineMessage, useIntl } from "react-intl";
 
-function InvitePopoverContent({ url, embed, inviteRequired, fetchingInvite, inviteUrl, revokeInvite }) {
+function InvitePopoverContent({
+  url,
+  /****DISABLED ,embed ****/
+  inviteRequired,
+  fetchingInvite,
+  inviteUrl,
+  revokeInvite
+}) {
   return (
     <Column center padding grow gap="lg" className={styles.invitePopover}>
       {inviteRequired ? (
@@ -23,11 +30,12 @@ function InvitePopoverContent({ url, embed, inviteRequired, fetchingInvite, invi
             value={url}
             buttonPreset="accent3"
           />
-          <CopyableTextInputField
+          {/****DISABLED IFRAME INVITATION
+            <CopyableTextInputField
             label={<FormattedMessage id="invite-popover.embed-code" defaultMessage="Embed Code" />}
             value={embed}
             buttonPreset="accent5"
-          />
+          />****/}
         </>
       )}
     </Column>

@@ -12,7 +12,9 @@ export const presets = [
   "accent2",
   "accent3",
   "accent4",
-  "accent5"
+  "accent5",
+  "accent7",
+  "accent8"
 ];
 
 export const types = ["none", "left", "middle", "right"];

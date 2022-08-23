@@ -124,7 +124,7 @@ export function ReactionPopoverButton({ items, presence, onToggleHandRaised }) {
             }
           }}
           label={title}
-          preset="accent2"
+          preset="accent8"
         />
       )}
     </Popover>

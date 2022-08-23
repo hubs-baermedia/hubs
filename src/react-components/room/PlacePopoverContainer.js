@@ -27,7 +27,7 @@ export function PlacePopoverContainer({ scene, mediaSearchStore, showNonHistorie
           hubChannel.can("spawn_drawing") && {
             id: "pen",
             icon: PenIcon,
-            color: "accent5",
+            color: "accent7",
             label: <FormattedMessage id="place-popover.item-type.pen" defaultMessage="Pen" />,
             onSelect: () => scene.emit("penButtonPressed"),
             selected: hasActivePen
@@ -35,7 +35,7 @@ export function PlacePopoverContainer({ scene, mediaSearchStore, showNonHistorie
           hubChannel.can("spawn_camera") && {
             id: "camera",
             icon: CameraIcon,
-            color: "accent5",
+            color: "accent1",
             label: <FormattedMessage id="place-popover.item-type.camera" defaultMessage="Camera" />,
             onSelect: () => scene.emit("action_toggle_camera"),
             selected: hasActiveCamera
@@ -51,14 +51,14 @@ export function PlacePopoverContainer({ scene, mediaSearchStore, showNonHistorie
             configs.integration("tenor") && {
               id: "gif",
               icon: GIFIcon,
-              color: "accent2",
+              color: "accent8",
               label: <FormattedMessage id="place-popover.item-type.gif" defaultMessage="GIF" />,
               onSelect: () => mediaSearchStore.sourceNavigate("gifs")
             },
             configs.integration("sketchfab") && {
               id: "model",
               icon: ObjectIcon,
-              color: "accent2",
+              color: "accent7",
               label: <FormattedMessage id="place-popover.item-type.model" defaultMessage="3D Model" />,
               onSelect: () => mediaSearchStore.sourceNavigate("sketchfab")
             },
@@ -72,7 +72,7 @@ export function PlacePopoverContainer({ scene, mediaSearchStore, showNonHistorie
             {
               id: "scene",
               icon: SceneIcon,
-              color: "accent1",
+              color: "accent8",
               label: <FormattedMessage id="place-popover.item-type.scene" defaultMessage="Scene" />,
               onSelect: () => mediaSearchStore.sourceNavigate("scenes")
             },
@@ -80,7 +80,7 @@ export function PlacePopoverContainer({ scene, mediaSearchStore, showNonHistorie
             {
               id: "upload",
               icon: UploadIcon,
-              color: "accent3",
+              color: "accent2",
               label: <FormattedMessage id="place-popover.item-type.upload" defaultMessage="Upload" />,
               onSelect: () => showNonHistoriedDialog(ObjectUrlModalContainer, { scene })
             }

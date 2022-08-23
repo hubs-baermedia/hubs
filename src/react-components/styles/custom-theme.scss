@@ -1,0 +1,121 @@
+/**
+ * Injected stylesheet after `global.scss` to override the global styles with branding styles.
+ * @author Yasien Kashef (yk@baermedia.com)
+ * @version 1.0.0
+*/
+
+// Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --font-family-default: 'Montserrat', 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    $primary: #183f74;
+    $primary-hover: #2f5282;
+    $primary-pressed: #163968;
+    $secondary: #a4d01c;
+    $secondary-hover: #b6d949;
+    $secondary-pressed: #83a616;
+    $neutral: #E7E7E7;
+    $neutral-hover: #F5F5F5;
+    $neutral-pressed: #DBDBDB;
+    $text-primary: #212120;
+    $text-primary-hover: #4d4d4d;
+    $text-primary-pressed: #1a1a1a;
+    $text-secondary: #7f7f7f;
+    $text-secondary-hover: #999999;
+    $text-secondary-pressed: #666666;
+    $text-neutral: #ffffff;
+    $cancel-color: #3b3b3b;
+    $cancel-color-hover: #626262;
+    $cancel-color-pressed: #2f2f2f;
+    $accent-7: #235c9b;
+    $accent-7-hover: #4f7daf;
+    $accent-7-pressed: #1c4a7c;
+    $accent-8: #141e37;
+    $accent-8-hover: #434b5f;
+    $accent-8-pressed: #10182c;
+
+    --text1-color: #{$text-primary};
+    --text1-color-hover: #{$text-primary-hover};
+    --text1-color-pressed: #{$text-primary-pressed};
+    --text2-color: #{$text-primary};
+    --text2-color-hover: #{$text-primary-hover};
+    --text2-color-pressed: #{$text-primary-pressed};
+    --text3-color: #{$text-secondary};
+    --text3-color-hover: #{$text-secondary-hover};
+    --text3-color-pressed: #{$text-secondary-pressed};
+    --text4-color: #{$text-primary};
+    --text4-color-hover: var(--text4-color);
+    --text4-color-pressed: var(--text4-color);
+    --text5-color: #{$text-neutral};
+    --text5-color-hover: #{$text-neutral};
+    --text5-color-pressed: #{$text-neutral};
+    --text-inverted-color: #{$text-neutral};
+
+    --link-color: #{$primary};
+    --link-color-hover: #{$primary-hover};
+    --link-color-pressed: #{$primary-pressed};
+
+    --accept-color: #{$secondary};
+    --accept-border-color: #{$secondary};
+    --accept-color-hover: #{$secondary-hover};
+    --accept-color-pressed: #{$secondary-pressed};
+
+    --cancel-color: #{$cancel-color};
+    --cancel-color-hover: #{$cancel-color-hover};
+    --cancel-color-pressed: #{$cancel-color-pressed};
+
+    --accent1-color: #{$primary};
+    --accent1-border-color: #{$primary};
+    --accent1-color-hover: #{$primary-hover};
+    --accent1-color-pressed: #{$primary-pressed};
+
+    // Accent for: Spectator
+    --accent2-color: #{$secondary};
+    --accent2-border-color: #{$secondary};
+    --accent2-color-hover: #{$secondary-hover};
+    --accent2-color-pressed: #{$secondary-pressed};
+
+    --accent3-color: #{$secondary};
+    --accent3-border-color: #{$secondary};
+    --accent3-color-hover: #{$secondary-hover};
+    --accent3-color-pressed: #{$secondary-pressed};
+
+    // Accent for: Room Entry, Chat
+    --accent4-color: #{$primary};
+    --accent4-border-color: #{$primary};
+    --accent4-color-hover: #{$primary-hover};
+    --accent4-color-pressed: #{$primary-pressed};
+
+    // Accent for: VR Entry
+    --accent5-color: #{$primary};
+    --accent5-border-color: #{$primary};
+    --accent5-color-hover: #{$primary-hover};
+    --accent5-color-pressed: #{$primary-pressed};
+
+    --accent6-color: #{$primary};
+    --accent6-border-color: #{$primary};
+    --accent6-color-hover: #{$primary-hover};
+    --accent6-color-pressed: #{$primary-pressed};
+
+    --accent7-color: #{$accent-7};
+    --accent7-border-color: #{$accent-7};
+    --accent7-color-hover: #{$accent-7-hover};
+    --accent7-color-pressed: #{$accent-7-pressed};
+
+    --accent8-color: #{$accent-8};
+    --accent8-border-color: #{$accent-8};
+    --accent8-color-hover: #{$accent-8-hover};
+    --accent8-color-pressed: #{$accent-8-pressed};
+
+    --primary-color: #{$primary};
+    --primary-color-hover: #{$primary-hover};
+    --primary-color-pressed: #{$primary-pressed};
+
+    --secondary-color: #{$neutral};
+    --secondary-color-hover: #{$neutral-hover};
+    --secondary-color-pressed: #{$neutral-pressed};
+
+    --toolbar-label-accent7: var(--accent7-color);
+    --toolbar-label-accent8: var(--accent8-color);
+}

@@ -1,3 +1,7 @@
+/**
+ * Default values of breakpoints, colors, screen sizes, font styles, spacing styles.
+*/
+
 // default below 576px (Portrait Phones)
 $breakpoint-sm: 576px; // Landscape Phones
 $breakpoint-md: 768px; // Tablets
@@ -155,6 +159,18 @@ $accent6-color: var(--accent6-color);
 $accent6-color-hover: var(--accent6-color-hover);
 $accent6-color-pressed: var(--accent6-color-pressed);
 
+//// New Accent
+$accent7-color: var(--accent7-color);
+$accent7-border-color: var(--accent7-border-color);
+$accent7-color-hover: var(--accent7-color-hover);
+$accent7-color-pressed: var(--accent7-color-pressed);
+
+//// New Accent
+$accent8-color: var(--accent8-color);
+$accent8-border-color: var(--accent8-border-color);
+$accent8-color-hover: var(--accent8-color-hover);
+$accent8-color-pressed: var(--accent8-color-pressed);
+
 $primary-color: var(--primary-color);
 $primary-color-hover: var(--primary-color-hover);
 $primary-color-pressed: var(--primary-color-pressed);
@@ -261,6 +277,9 @@ $toolbar-label-accent2: var(--toolbar-label-accent2);
 $toolbar-label-accent3: var(--toolbar-label-accent3);
 $toolbar-label-accent4: var(--toolbar-label-accent4);
 $toolbar-label-accent5: var(--toolbar-label-accent5);
+// New Accents
+$toolbar-label-accent7: var(--toolbar-label-accent7);
+$toolbar-label-accent8: var(--toolbar-label-accent8);
 
 $tile-text-color: var(--tile-text-color);
 $tile-bg-color: var(--tile-bg-color);
@@ -271,4 +290,3 @@ $tile-button-bg-color: var(--tile-button-bg-color);
 $tile-button-bg-color-hover: var(--tile-button-bg-color-hover);
 $tile-button-bg-color-pressed: var(--tile-button-bg-color-pressed);
 $tile-button-border-color: var(--tile-button-border-color);
-

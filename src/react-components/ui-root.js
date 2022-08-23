@@ -54,17 +54,17 @@ import { ContentMenu, PeopleMenuButton, ObjectsMenuButton } from "./room/Content
 import { ReactComponent as CameraIcon } from "./icons/Camera.svg";
 import { ReactComponent as AvatarIcon } from "./icons/Avatar.svg";
 import { ReactComponent as AddIcon } from "./icons/Add.svg";
-import { ReactComponent as DeleteIcon } from "./icons/Delete.svg";
+////DISABLED import { ReactComponent as DeleteIcon } from "./icons/Delete.svg";
 import { ReactComponent as FavoritesIcon } from "./icons/Favorites.svg";
 import { ReactComponent as StarOutlineIcon } from "./icons/StarOutline.svg";
 import { ReactComponent as StarIcon } from "./icons/Star.svg";
 import { ReactComponent as SettingsIcon } from "./icons/Settings.svg";
-import { ReactComponent as WarningCircleIcon } from "./icons/WarningCircle.svg";
+////DISABLED import { ReactComponent as WarningCircleIcon } from "./icons/WarningCircle.svg";
 import { ReactComponent as HomeIcon } from "./icons/Home.svg";
-import { ReactComponent as TextDocumentIcon } from "./icons/TextDocument.svg";
-import { ReactComponent as SupportIcon } from "./icons/Support.svg";
-import { ReactComponent as ShieldIcon } from "./icons/Shield.svg";
-import { ReactComponent as DiscordIcon } from "./icons/Discord.svg";
+////DISABLED import { ReactComponent as TextDocumentIcon } from "./icons/TextDocument.svg";
+////DISABLED import { ReactComponent as SupportIcon } from "./icons/Support.svg";
+////DISABLED import { ReactComponent as ShieldIcon } from "./icons/Shield.svg";
+////DISABLED import { ReactComponent as DiscordIcon } from "./icons/Discord.svg";
 import { ReactComponent as VRIcon } from "./icons/VR.svg";
 import { ReactComponent as LeaveIcon } from "./icons/Leave.svg";
 import { ReactComponent as EnterIcon } from "./icons/Enter.svg";
@@ -87,7 +87,7 @@ import { RoomSettingsSidebarContainer } from "./room/RoomSettingsSidebarContaine
 import { AutoExitWarningModal, AutoExitReason } from "./room/AutoExitWarningModal";
 import { ExitReason } from "./room/ExitedRoomScreen";
 import { UserProfileSidebarContainer } from "./room/UserProfileSidebarContainer";
-import { CloseRoomModal } from "./room/CloseRoomModal";
+////DISABLED import { CloseRoomModal } from "./room/CloseRoomModal";
 import { WebVRUnsupportedModal } from "./room/WebVRUnsupportedModal";
 import { TweetModalContainer } from "./room/TweetModalContainer";
 import { TipContainer, FullscreenTip } from "./room/TipContainer";
@@ -1089,7 +1089,7 @@ class UIRoot extends Component {
     const renderEntryFlow = (!enteredOrWatching && this.props.hub) || this.isWaitingForAutoExit();
 
     const canCreateRoom = !configs.feature("disable_room_creation") || configs.isAdmin();
-    const canCloseRoom = this.props.hubChannel && !!this.props.hubChannel.canOrWillIfCreator("close_hub");
+    ////DISABLED const canCloseRoom = this.props.hubChannel && !!this.props.hubChannel.canOrWillIfCreator("close_hub");
     const isModerator = this.props.hubChannel && this.props.hubChannel.canOrWillIfCreator("kick_users") && !isMobileVR;
 
     const moreMenu = [
@@ -1211,8 +1211,9 @@ class UIRoot extends Component {
                   reason: LeaveReason.leaveRoom
                 });
               }
-            },
-          canCloseRoom && {
+            }
+          /****DISABLED
+            ,canCloseRoom && {
             id: "close-room",
             label: <FormattedMessage id="more-menu.close-room" defaultMessage="Close Room" />,
             icon: DeleteIcon,
@@ -1230,9 +1231,11 @@ class UIRoot extends Component {
                 SignInMessages.closeRoom
               )
           }
+          ****/
         ].filter(item => item)
-      },
-      {
+      }
+      /****DISABLED
+      ,{
         id: "support",
         label: <FormattedMessage id="more-menu.support" defaultMessage="Support" />,
         items: [
@@ -1286,6 +1289,7 @@ class UIRoot extends Component {
           }
         ].filter(item => item)
       }
+      ****/
     ];
 
     return (
@@ -1593,7 +1597,8 @@ class UIRoot extends Component {
                           onClick={() => exit2DInterstitialAndEnterVR(true)}
                         />
                       )}
-                    {entered && (
+                    {/****DISABLED
+                     {entered && (
                       <ToolbarButton
                         icon={<LeaveIcon />}
                         label={<FormattedMessage id="toolbar.leave-room-button" defaultMessage="Leave" />}
@@ -1605,7 +1610,7 @@ class UIRoot extends Component {
                           });
                         }}
                       />
-                    )}
+                      )}****/}
                     <MoreMenuPopoverButton menu={moreMenu} />
                   </>
                 }

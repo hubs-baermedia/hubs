@@ -27,7 +27,8 @@
 :local(.logo) {
   // Keep arbitrary-sized logos from making the page jump on load
   position: absolute;
-  transform: translateY(calc(-100% - 20px));
+  //// CHANGED to make logo closer to loading animation
+  transform: translateY(calc(-100%));
   max-width: 260px;
   max-height: 140px;
 }

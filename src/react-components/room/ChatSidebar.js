@@ -439,7 +439,8 @@ export function ChatToolbarButton(props) {
     <ToolbarButton
       {...props}
       icon={<ChatIcon />}
-      preset="accent4"
+      //// CHANGED to accent2 from accent 4
+      preset="accent2"
       label={<FormattedMessage id="chat-toolbar-button" defaultMessage="Chat" />}
     />
   );

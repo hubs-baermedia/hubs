@@ -1,11 +1,12 @@
-import React, { useEffect, useMemo } from "react";
+////DISABLED import React, { useEffect, useMemo } from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { useIntl } from "react-intl";
+////DISABLED import { useIntl } from "react-intl";
 import { LoadingScreen } from "./LoadingScreen";
 import { useRoomLoadingState } from "./useRoomLoadingState";
 
 export function LoadingScreenContainer({ onLoaded, scene }) {
-  const intl = useIntl();
+  ////DISABLED const intl = useIntl();
 
   const { loading, message } = useRoomLoadingState(scene);
 
@@ -14,12 +15,16 @@ export function LoadingScreenContainer({ onLoaded, scene }) {
       if (!loading) {
         onLoaded();
       }
+
+      return function cleanup() {
+        console.log("Yes");
+      };
     },
     [loading, onLoaded]
   );
 
-  //TODO: Make these configurable
-  const infoMessages = useMemo(
+  ////DISABLED
+  /*const infoMessages = useMemo(
     () => [
       {
         heading: intl.formatMessage({ id: "loading-screen.heading.tip", defaultMessage: "Tip:" }),
@@ -47,9 +52,9 @@ export function LoadingScreenContainer({ onLoaded, scene }) {
       }
     ],
     [intl]
-  );
+  );*/
 
-  return <LoadingScreen message={message} infoMessages={infoMessages} />;
+  return <LoadingScreen message={message} /****DISABLED infoMessages={infoMessages} ****/ />;
 }
 
 LoadingScreenContainer.propTypes = {
