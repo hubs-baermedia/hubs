@@ -1,39 +1,48 @@
 /**
+ * Custom Theme
  * Injected stylesheet after `global.scss` to override the global styles with branding styles.
  * @author Yasien Kashef (yk@baermedia.com)
  * @version 1.0.0
 */
 
 // Montserrat
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("./fonts/fonts.scss");
 
 :root {
-    --font-family-default: 'Montserrat', 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    $primary: #183f74;
-    $primary-hover: #2f5282;
-    $primary-pressed: #163968;
+    --font-family-default: 'Helvetica Neue', 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    $primary: #7F7F7F;
+    $primary-hover: #999999;
+    $primary-pressed: #666666;
+
     $secondary: #a4d01c;
     $secondary-hover: #b6d949;
     $secondary-pressed: #83a616;
+
     $neutral: #E7E7E7;
     $neutral-hover: #F5F5F5;
     $neutral-pressed: #DBDBDB;
-    $text-primary: #212120;
-    $text-primary-hover: #4d4d4d;
-    $text-primary-pressed: #1a1a1a;
-    $text-secondary: #7f7f7f;
+
+    $text-primary: #262626;
+    $text-primary-hover: #515151;
+    $text-primary-pressed: #1e1e1e;
+
+    $text-secondary: #7F7F7F;
     $text-secondary-hover: #999999;
     $text-secondary-pressed: #666666;
+
     $text-neutral: #ffffff;
-    $cancel-color: #3b3b3b;
-    $cancel-color-hover: #626262;
-    $cancel-color-pressed: #2f2f2f;
-    $accent-7: #235c9b;
-    $accent-7-hover: #4f7daf;
-    $accent-7-pressed: #1c4a7c;
-    $accent-8: #141e37;
-    $accent-8-hover: #434b5f;
-    $accent-8-pressed: #10182c;
+
+    $cancel-color: #7F7F7F;
+    $cancel-color-hover: #999999;
+    $cancel-color-pressed: #666666;
+
+    $accent-7: #7F7F7F;
+    $accent-7-hover: #999;
+    $accent-7-pressed: #666;
+    $accent-8: #7F7F7F;
+    $accent-8-hover: #999;
+    $accent-8-pressed: #666;
 
     --text1-color: #{$text-primary};
     --text1-color-hover: #{$text-primary-hover};
@@ -118,4 +127,6 @@
 
     --toolbar-label-accent7: var(--accent7-color);
     --toolbar-label-accent8: var(--accent8-color);
+
+    --loading-screen-background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #E6E6E6 100%);
 }

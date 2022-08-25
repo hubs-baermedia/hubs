@@ -16,7 +16,7 @@ import {
 } from "../utils/media-url-utils";
 import { addAnimationComponents } from "../utils/animation";
 
-import loadingObjectSrc from "../assets/models/LoadingObject_Atom.glb";
+import loadingObjectSrc from "../assets/models/loading_object_animation.glb";
 import { SOUND_MEDIA_LOADING, SOUND_MEDIA_LOADED } from "../systems/sound-effects-system";
 import { loadModel } from "./gltf-model-plus";
 import { cloneObject3D, setMatrixWorld } from "../utils/three-utils";
@@ -188,7 +188,10 @@ AFRAME.registerComponent("media-loader", {
     if (useFancyLoader) {
       this.loaderMixer = new THREE.AnimationMixer(mesh);
 
-      this.loadingClip = this.loaderMixer.clipAction(mesh.animations[0]);
+      this.loadingClips = mesh.animations.map(animation => {
+        return this.loaderMixer.clipAction(animation);
+      });
+
       this.loadingScaleClip = this.loaderMixer.clipAction(
         new THREE.AnimationClip(null, 1000, [
           new THREE.VectorKeyframeTrack(".scale", [0, 0.2], [0, 0, 0, mesh.scale.x, mesh.scale.y, mesh.scale.z])
@@ -199,7 +202,7 @@ AFRAME.registerComponent("media-loader", {
         this.el.setAttribute("shape-helper__loader", { type: SHAPE.BOX });
       }, 200);
 
-      this.loadingClip.play();
+      this.loadingClips.forEach(clip => clip.play());
       this.loadingScaleClip.play();
     }
 
@@ -225,11 +228,11 @@ AFRAME.registerComponent("media-loader", {
       this.loadingSoundEffect = null;
     }
     if (this.loaderMixer) {
-      this.loadingClip.stop();
+      this.loadingClips.forEach(clip => clip.stop());
       this.loadingScaleClip.stop();
       delete this.loaderMixer;
       delete this.loadingScaleClip;
-      delete this.loadingClip;
+      delete this.loadingClips;
     }
     delete this.showLoaderTimeout;
     this.removeShape("loader");

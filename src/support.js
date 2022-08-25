@@ -1,5 +1,9 @@
+/**
+ * Needed for support and polyfill, renders in index.html.
+ * @version 0.0.0
+ * @status checked
+ */
 /* eslint-disable @calm/react-intl/missing-formatted-message */
-
 /*
 NOTE: support.js needs to be as self-contained as possible, since it needs to work in legacy browers
 that we do not support. Avoid adding imports to libraries or other modules from our own codebase

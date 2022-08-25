@@ -1,32 +1,19 @@
 @use '../styles/theme';
 
 :local(.toolbar) {
-  height: 96px;
+  width: 100px;
   display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   padding: 12px;
   background-color: theme.$background1-color;
-  border-top: 1px solid theme.$border1-color;
+  border: 1px solid theme.$border1-color;
+  border-left: none;
+  opacity: 0.75;
+  gap: 10px;
 
-  @media (min-width: theme.$breakpoint-lg) {
-    padding: 12px 24px;
-    justify-content: space-between;
-  }
-}
-
-:local(.content) {
-  display: flex;
-  flex: 1;
-  justify-content: space-around;
-
-  @media (min-width: theme.$breakpoint-lg) {
-    flex: 0;
-
-    & > * {
-      margin-right: 24px;
-    }
-
-    &:last-child {
-      margin-right: 0px;
-    }
+  &:hover {
+    opacity: 1;
   }
 }

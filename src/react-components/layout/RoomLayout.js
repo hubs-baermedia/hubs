@@ -9,10 +9,7 @@ export function RoomLayout({
   viewportClassName,
   sidebar,
   sidebarClassName,
-  toolbarLeft,
-  toolbarCenter,
-  toolbarRight,
-  toolbarClassName,
+  toolbar,
   modal,
   viewport,
   objectFocused,
@@ -24,14 +21,7 @@ export function RoomLayout({
     <div className={classNames(styles.roomLayout, { [styles.objectFocused]: objectFocused }, className)} {...rest}>
       {sidebar && <div className={classNames(styles.sidebar, sidebarClassName)}>{sidebar}</div>}
       <div className={classNames(styles.modalContainer, styles.viewport)}>{modal}</div>
-      {(toolbarLeft || toolbarCenter || toolbarRight) && (
-        <Toolbar
-          className={classNames(styles.main, styles.toolbar, toolbarClassName)}
-          left={toolbarLeft}
-          center={toolbarCenter}
-          right={toolbarRight}
-        />
-      )}
+      <Toolbar className={classNames(styles.toolbar)} tools={toolbar} />
       <div
         className={classNames(styles.main, styles.viewport, { [styles.streaming]: streaming }, viewportClassName)}
         ref={viewportRef}
@@ -47,9 +37,7 @@ RoomLayout.propTypes = {
   viewportClassName: PropTypes.string,
   sidebar: PropTypes.node,
   sidebarClassName: PropTypes.string,
-  toolbarLeft: PropTypes.node,
-  toolbarCenter: PropTypes.node,
-  toolbarRight: PropTypes.node,
+  toolbar: PropTypes.node,
   toolbarClassName: PropTypes.string,
   modal: PropTypes.node,
   viewport: PropTypes.node,

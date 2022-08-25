@@ -1,3 +1,8 @@
+/**
+ * Theme
+ * Loads theme and handles dark mode.
+ * @version 0.0.0
+ */
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 

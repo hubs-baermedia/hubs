@@ -5,12 +5,10 @@
   width: 100%;
   height: 100%;
   grid-template-columns:
-    [main] auto
-    [sidebar] minmax(0, min-content);
-  
-  grid-template-rows: 
-    [viewport] auto
-    [toolbar] min-content;
+    [main] auto [sidebar] minmax(0, min-content);
+
+  grid-template-rows:
+    [viewport] auto;
 
   overflow: hidden;
   position: relative;
@@ -27,7 +25,8 @@
   overflow: hidden;
   width: 450px;
 
-  @media(max-width: theme.$breakpoint-lg - 1), (max-height: theme.$breakpoint-vr - 1) {
+  @media(max-width: theme.$breakpoint-lg - 1),
+  (max-height: theme.$breakpoint-vr - 1) {
     position: fixed;
     top: 0;
     left: 0;
@@ -46,14 +45,16 @@
   justify-content: center;
   align-items: center;
 
-  & > * {
+  &>* {
     pointer-events: auto;
   }
 }
 
 :local(.toolbar) {
-  grid-row-start: toolbar;
-  grid-column-end: -1;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
   pointer-events: auto;
   z-index: 0;
 }
@@ -67,7 +68,7 @@
   align-items: center;
   z-index: 10;
 
-  & > * {
+  &>* {
     pointer-events: auto;
   }
 }
@@ -81,7 +82,9 @@
 }
 
 :local(.object-focused) {
-  @media(max-width: theme.$breakpoint-lg - 1), (max-height: theme.$breakpoint-vr - 1) {
+
+  @media(max-width: theme.$breakpoint-lg - 1),
+  (max-height: theme.$breakpoint-vr - 1) {
     :local(.toolbar) {
       display: none;
     }

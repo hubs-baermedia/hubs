@@ -15,12 +15,10 @@
 :local(.scene-screenshot-container) {
   position: relative;
   width: 100%;
-  border-radius: 12px;
 }
 
 :local(.scene-screenshot-image) {
   background-color: theme.$tile-bg-color;
-  border-radius: 12px;
 }
 
 :local(.scene-info) {

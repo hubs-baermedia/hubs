@@ -7,7 +7,6 @@
   height: max-content;
   background-color: theme.$background1-color;
   border: 1px solid theme.$border1-color;
-  border-radius: theme.$border-radius-regular;
   margin: 24px;
   z-index: 1;
   width: 100%;
@@ -42,7 +41,9 @@
 }
 
 :local(.sm-fullscreen) {
-  @media(max-width: theme.$breakpoint-lg - 1), (max-height: theme.$breakpoint-vr - 1) {
+
+  @media(max-width: theme.$breakpoint-lg - 1),
+  (max-height: theme.$breakpoint-vr - 1) {
     position: fixed;
     top: 0;
     left: 0;

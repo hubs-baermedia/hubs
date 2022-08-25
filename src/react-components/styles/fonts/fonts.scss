@@ -1,0 +1,37 @@
+/**
+ * Helvatica Neue
+ * baermedia Fonts
+ * @version 1.0.0
+*/
+
+/* Light */
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url("./HelveticaNeueLTStd-Lt.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Regular */
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url("./HelveticaNeueLTStd-Roman.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url("./HelveticaNeueLTStd-Md.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url("./HelveticaNeueLTStd-Bd.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}

@@ -17,7 +17,7 @@ export function LoadingScreenContainer({ onLoaded, scene }) {
       }
 
       return function cleanup() {
-        console.log("Yes");
+        console.log("Cleaned Up!");
       };
     },
     [loading, onLoaded]
